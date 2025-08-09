@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Booking</title>
+    <link rel="stylesheet" href="event.css">
+</head>
+<body>
+
+    <header>
+        <h1>🎟 Event Booking</h1>
+        <p>Book your favorite events in one click</p>
+    </header>
+
+    <main>
+        <section class="events">
+            <div class="event-card">
+                <img src="https://source.unsplash.com/400x250/?concert" alt="Concert">
+                <h3>Rock Concert 2025</h3>
+                <p>📅 15th Sept 2025</p>
+                <p>💰 $50</p>
+                <button onclick="openBooking('Rock Concert 2025')">Book Now</button>
+            </div>
+
+            <div class="event-card">
+                <img src="https://source.unsplash.com/400x250/?workshop" alt="Workshop">
+                <h3>Photography Workshop</h3>
+                <p>📅 25th Sept 2025</p>
+                <p>💰 $30</p>
+                <button onclick="openBooking('Photography Workshop')">Book Now</button>
+            </div>
+
+            <div class="event-card">
+                <img src="https://source.unsplash.com/400x250/?festival" alt="Festival">
+                <h3>Food Festival</h3>
+                <p>📅 10th Oct 2025</p>
+                <p>💰 $20</p>
+                <button onclick="openBooking('Food Festival')">Book Now</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Booking Form Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBooking()">&times;</span>
+            <h2 id="eventTitle">Book Event</h2>
+            <form id="bookingForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="number" id="tickets" placeholder="Number of Tickets" min="1" required>
+                <button type="submit">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="event.js"></script>
+</body>
+</html>
