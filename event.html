@@ -3,57 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Booking</title>
+    <title>Event Booking Website</title>
     <link rel="stylesheet" href="event.css">
 </head>
 <body>
-
     <header>
-        <h1>🎟 Event Booking</h1>
-        <p>Book your favorite events in one click</p>
+        <h1>Event Booking</h1>
+        <p>Book and manage your favorite events easily!</p>
     </header>
 
     <main>
-        <section class="events">
+        <section class="event-list">
+            <!-- Event Cards -->
             <div class="event-card">
-                <img src="https://source.unsplash.com/400x250/?concert" alt="Concert">
-                <h3>Rock Concert 2025</h3>
-                <p>📅 15th Sept 2025</p>
-                <p>💰 $50</p>
-                <button onclick="openBooking('Rock Concert 2025')">Book Now</button>
+                <img src="https://picsum.photos/400/200?1" alt="Concert">
+                <h2>Rock Concert Night</h2>
+                <p>Date: 25th August 2025</p>
+                <p>Location: City Arena</p>
+                <button onclick="bookEvent('Rock Concert Night')">Book Now</button>
             </div>
 
             <div class="event-card">
-                <img src="https://source.unsplash.com/400x250/?workshop" alt="Workshop">
-                <h3>Photography Workshop</h3>
-                <p>📅 25th Sept 2025</p>
-                <p>💰 $30</p>
-                <button onclick="openBooking('Photography Workshop')">Book Now</button>
+                <img src="https://picsum.photos/400/200?2" alt="Workshop">
+                <h2>Photography Workshop</h2>
+                <p>Date: 1st September 2025</p>
+                <p>Location: Art Hub Studio</p>
+                <button onclick="bookEvent('Photography Workshop')">Book Now</button>
             </div>
 
             <div class="event-card">
-                <img src="https://source.unsplash.com/400x250/?festival" alt="Festival">
-                <h3>Food Festival</h3>
-                <p>📅 10th Oct 2025</p>
-                <p>💰 $20</p>
-                <button onclick="openBooking('Food Festival')">Book Now</button>
+                <img src="https://picsum.photos/400/200?3" alt="Sports">
+                <h2>Football Championship</h2>
+                <p>Date: 10th September 2025</p>
+                <p>Location: National Stadium</p>
+                <button onclick="bookEvent('Football Championship')">Book Now</button>
+            </div>
+
+            <div class="event-card">
+                <img src="https://picsum.photos/400/200?4" alt="Festival">
+                <h2>Food & Music Festival</h2>
+                <p>Date: 15th September 2025</p>
+                <p>Location: Riverside Park</p>
+                <button onclick="bookEvent('Food & Music Festival')">Book Now</button>
+            </div>
+
+            <div class="event-card">
+                <img src="https://picsum.photos/400/200?5" alt="Exhibition">
+                <h2>Art & Craft Exhibition</h2>
+                <p>Date: 20th September 2025</p>
+                <p>Location: Downtown Gallery</p>
+                <button onclick="bookEvent('Art & Craft Exhibition')">Book Now</button>
+            </div>
+
+            <div class="event-card">
+                <img src="https://picsum.photos/400/200?6" alt="Theatre">
+                <h2>Drama Theatre Night</h2>
+                <p>Date: 28th September 2025</p>
+                <p>Location: Grand Theatre Hall</p>
+                <button onclick="bookEvent('Drama Theatre Night')">Book Now</button>
             </div>
         </section>
     </main>
 
-    <!-- Booking Form Modal -->
-    <div class="modal" id="bookingModal">
-        <div class="modal-content">
-            <span class="close" onclick="closeBooking()">&times;</span>
-            <h2 id="eventTitle">Book Event</h2>
-            <form id="bookingForm">
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Your Email" required>
-                <input type="number" id="tickets" placeholder="Number of Tickets" min="1" required>
-                <button type="submit">Confirm Booking</button>
-            </form>
-        </div>
-    </div>
+    <footer>
+        <p>© 2025 Event Booking Website | All Rights Reserved</p>
+    </footer>
 
     <script src="event.js"></script>
 </body>
